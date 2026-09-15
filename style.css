@@ -1426,6 +1426,21 @@ button {
   border: 0;
 }
 
+/* Vídeo local (ex.: gravação de celular): não força 16:9 como o embed do
+   YouTube, já que pode vir vertical. Centraliza numa largura de leitura. */
+.hymn-video--native {
+  aspect-ratio: auto;
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--navy-deep);
+}
+
+.hymn-video--native video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ===== COMO CHEGAR ===== */
 .location-panel {
   display: grid;

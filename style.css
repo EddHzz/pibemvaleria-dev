@@ -634,6 +634,18 @@ button {
   margin-top: 42px;
 }
 
+/* Usado quando há poucos itens (sem miniatura própria): 2 colunas centralizadas
+   em vez de forçar o grid de 3 colunas padrão da galeria do Instagram. */
+.gallery-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.gallery-grid--compact .gallery-card {
+  aspect-ratio: 16 / 10;
+}
+
 /* O card tem proporção fixa e o texto fica sobre a imagem: altura previsível
    em qualquer tela e sem faixas vazias em volta das artes. */
 .gallery-card {
